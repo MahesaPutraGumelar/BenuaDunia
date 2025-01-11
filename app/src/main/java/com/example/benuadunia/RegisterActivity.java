@@ -1,10 +1,12 @@
 package com.example.benuadunia;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -25,7 +27,39 @@ public class RegisterActivity extends AppCompatActivity {
         registerButton = findViewById(R.id.button);
 
         registerButton.setOnClickListener(v -> registerUser());
+        ImageView gmailIcon = findViewById(R.id.gmail);
+        ImageView instagramIcon = findViewById(R.id.instagram);
+        ImageView whatsappIcon = findViewById(R.id.whatsappp);
+
+        gmailIcon.setOnClickListener(v -> openGmail());
+        instagramIcon.setOnClickListener(v -> openInstagram());
+        whatsappIcon.setOnClickListener(v -> openWhatsapp());
     }
+    private void openGmail() {
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("mailto:someone@example.com"));
+        startActivity(intent);
+    }
+
+    // Open Instagram when the Instagram icon is clicked
+    private void openInstagram() {
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/your_username"));
+            startActivity(intent);
+        } catch (Exception e) {
+            Toast.makeText(this, "Instagram app not installed", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    // Open WhatsApp when the WhatsApp icon is clicked
+    private void openWhatsapp() {
+        try {
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/your_phone_number"));
+            startActivity(intent);
+        } catch (Exception e) {
+            Toast.makeText(this, "WhatsApp app not installed", Toast.LENGTH_SHORT).show();
+        }
+    }
+
 
     public void registerUser() {
         // Get the values from the fields
