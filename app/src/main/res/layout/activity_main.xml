@@ -92,7 +92,7 @@
                     android:layout_height="match_parent"
                     android:layout_marginLeft="20dp"
                     android:layout_marginRight="20dp"
-                    android:layout_marginBottom="30dp">
+                    android:layout_marginBottom="20dp">
 
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
@@ -100,7 +100,8 @@
                         android:id="@+id/password"
                         android:hint="Masukan Password"
                         android:inputType="textPassword"
-                        android:drawableEnd="@drawable/ic_eye"/>
+                        android:drawableEnd="@drawable/ic_eye"
+                        android:drawablePadding="10dp" />
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <Button

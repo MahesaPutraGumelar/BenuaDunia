@@ -117,6 +117,13 @@ public class BenuaActivity extends AppCompatActivity implements NegaraAdapter.On
             addNegara(data, "Italy", "ic_italy", "Ibukota Rome", "301.340 km²",
                     "Italia adalah negara yang kaya akan sejarah dan seni, terkenal dengan Colosseum, masakan khasnya seperti pasta, " +
                             "dan kota romantis seperti Venesia.");
+            addNegara(data, "Spain", "ic_spain", "Ibukota Madrid", "505.992 km²",
+                    "Spanyol dikenal dengan keindahan pantainya, seni flamenco, dan arsitektur khas seperti Sagrada Familia di Barcelona. " +
+                            "Ibukota Madrid memiliki budaya yang kaya dan hidup.");
+            addNegara(data, "Portugal", "ic_portugal", "Ibukota Lisbon", "92.090 km²",
+                    "Portugal terkenal dengan pantai-pantainya yang menakjubkan, kota tua yang indah, dan tradisi fado. Lisbon, ibu kotanya, adalah kota dengan pemandangan indah dan kehidupan malam yang semarak.");
+
+
         }
 
         NegaraAdapter adapter = new NegaraAdapter(data, this);

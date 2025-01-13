@@ -139,6 +139,7 @@
                 android:text="Deskripsi negara akan ditampilkan di sini."
                 android:textColor="#FF9800"
                 android:layout_marginTop="8dp"
+                android:justificationMode="inter_word"
                 android:textSize="14sp" />
         </LinearLayout>
     </LinearLayout>

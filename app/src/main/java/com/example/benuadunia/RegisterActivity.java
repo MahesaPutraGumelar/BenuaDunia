@@ -40,56 +40,43 @@ public class RegisterActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    // Open Instagram when the Instagram icon is clicked
     private void openInstagram() {
         try {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.instagram.com/your_username"));
             startActivity(intent);
         } catch (Exception e) {
-            Toast.makeText(this, "Instagram app not installed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Instagram belum di instal", Toast.LENGTH_SHORT).show();
         }
     }
-
-    // Open WhatsApp when the WhatsApp icon is clicked
     private void openWhatsapp() {
         try {
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://wa.me/your_phone_number"));
             startActivity(intent);
         } catch (Exception e) {
-            Toast.makeText(this, "WhatsApp app not installed", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "WhatsApp belum di instal", Toast.LENGTH_SHORT).show();
         }
     }
 
 
     public void registerUser() {
-        // Get the values from the fields
         String name = nameEditText.getText().toString().trim();
         String email = emailEditText.getText().toString().trim();
         String password = passwordEditText.getText().toString().trim();
         String confirmPassword = confirmPasswordEditText.getText().toString().trim();
 
-        // Check if any field is empty
         if (name.isEmpty() || email.isEmpty() || password.isEmpty() || confirmPassword.isEmpty()) {
-            // Display alert if any field is empty
-            Toast.makeText(this, "All fields must be filled!", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Semua Harus di isi", Toast.LENGTH_SHORT).show();
         } else {
-            // Check if passwords match
             if (!password.equals(confirmPassword)) {
-                // Display alert if passwords don't match
-                Toast.makeText(this, "Passwords do not match!", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "PasswordsConfirm harus sama dengan password", Toast.LENGTH_SHORT).show();
             } else {
-                // Simulate a successful registration
-                // Here, you would save the user data to the database or server
-                // For now, show a success message and redirect to the login screen
-
                 new AlertDialog.Builder(this)
-                        .setTitle("Registration Successful")
-                        .setMessage("You have registered successfully. Do you want to login now?")
+                        .setTitle("Registration Berhasil")
+                        .setMessage("Selamat Registrasi kamu telah berhasil, Apakah Kamu Ingin Login?")
                         .setPositiveButton("OK", (dialog, which) -> {
-                            // Redirect to Login screen
                             Intent intent = new Intent(RegisterActivity.this, MainActivity.class);
                             startActivity(intent);
-                            finish();  // Close the RegisterActivity
+                            finish();
                         })
                         .setNegativeButton("Cancel", null)
                         .show();

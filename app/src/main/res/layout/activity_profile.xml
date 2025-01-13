@@ -36,7 +36,7 @@
         android:id="@+id/profileEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="mahesa@gmail.com"
+        android:text="mahesamiku40@gmail.com"
         android:textSize="16sp"
         android:textColor="#777777"
         android:layout_marginBottom="32dp"
@@ -70,6 +70,7 @@
                 android:layout_height="wrap_content"
                 android:text="Hallo, nama saya Mahesa Putra Gumelar, Saya adalah seorang Developer Junior , saya membangun aplikasi ini untuk kepentingan edukasi terhadap materi belajar mengenai Benua di Dunia ini"
                 android:textSize="14sp"
+                android:justificationMode="inter_word"
                 android:textColor="#777777" />
 
         </LinearLayout>
